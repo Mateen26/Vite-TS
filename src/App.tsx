@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import './App.css';
 import Widget from './components/Widget';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import CnicInput from './components/CnicInput';
-import './Widget.scss';
+import './assets/scss/Widget.scss';
 
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
     <>
       <h1>Form</h1>
 
-      <div className='my-component'>
+ 
         <Widget
           type={'input'}
           inputType={'name'}
@@ -32,9 +32,9 @@ function App() {
              setFullName(String(value));
           }}
         />
-      </div>
+ 
       
-      <div className=''>
+    
         <Widget
           id='passowrd'
           type={'password'}
@@ -50,12 +50,12 @@ function App() {
              setPassword(String(value));
           }}
         />
-      </div>
+     
 
-      <div className=''>
+    
       <CnicInput
         type={'cnic'}
-        inputType={'text'}
+        inputType={'number'}
         label={'CNIC'}
         id={'cnic'}
         icon={'icon-visitor-card'}
@@ -69,7 +69,7 @@ function App() {
           setCnic(String(value));
         }}
       />
-      </div>
+     
 
     </>
   );

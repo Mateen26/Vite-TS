@@ -60,7 +60,7 @@ const CustomInput: FC<InputProps> = (props) => {
   };
 
   return (
-   <>
+  
 
     <div
       className={`inputs ${props.forceActive ? 'force-active' : ''} ${props.readOnly ? 'read-only' : ''}`}
@@ -94,7 +94,7 @@ const CustomInput: FC<InputProps> = (props) => {
     
 
 
-    </>
+  
 
 
 

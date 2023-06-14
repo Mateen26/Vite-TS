@@ -88,7 +88,7 @@ const CnicInput: FC<InputProps> = (props) => {
   };
 
   return (
-    <>
+  
 
         <div className={`inputs ${props.readOnly ? 'read-only' : ''}`}>
           {props.icon && <i className={props.icon}></i>}
@@ -96,7 +96,7 @@ const CnicInput: FC<InputProps> = (props) => {
           <input
             required={props.require}
             type={'text'}
-          className={`form-control ${props.id}`}
+            className={`form-control ${props.inputType} ${props.id}`}
             id={props.id}
             value={props.defaultValue || cnic}
             spellCheck='false'
@@ -110,7 +110,7 @@ const CnicInput: FC<InputProps> = (props) => {
             {props.require && <em className='text-red-400'>*</em>}
           </label>
         </div>
-    </>
+   
 
 
 

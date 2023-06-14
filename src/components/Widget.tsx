@@ -23,85 +23,83 @@ interface WidgetProps {
 
 const Widget: FC<WidgetProps> = (props) => {
   return (
-    <header>
-      <>
-        {props?.type === "input" && (
-          <CustomInput
-            type={props.type}
-            forceActive={props?.forceActive || false}
-            readOnly={false}
-            icon={props.icon}
-            autoFocus={(inputElement: HTMLInputElement) => {
-              inputElement.focus();
-            }}
-            require={props.require}
-            inputType={props.inputType}
-            id={props.id}
-            class={props?.class}
-            defaultValue={props?.defaultValue || ''}
-            maxlength={50}
-            name={props?.name}
-            label={props.label}
-            onlyLetters={props.onlyLetters}
-            onlyNumbers={props.onlyNumbers}
-            setValue={props.setValue}
-            setCapitalise={false}
-          />
-        )}
 
-        {props?.type === "password" && (
-          <PasswordInput
-            type={props.type}
-            forceActive={props?.forceActive || false}
-            readOnly={false}
-            icon={props.icon}
-            autoFocus={(inputElement: HTMLInputElement) => {
-              inputElement.focus();
-            }}
-            require={props.require}
-            inputType={props.inputType}
-            id={props.id}
-            class={props?.class}
-            defaultValue={props?.defaultValue || ''}
-            maxlength={50}
-            name={props?.name}
-            label={props.label}
-            onlyLetters={props.onlyLetters}
-            onlyNumbers={props.onlyNumbers}
-            setValue={props.setValue}
-            setCapitalise={false}
-          />
-        )}
+   
+       <>
+          {props?.type === "input" && (
+            <CustomInput
+              type={props.type}
+              forceActive={props?.forceActive || false}
+              readOnly={false}
+              icon={props.icon}
+              autoFocus={(inputElement: HTMLInputElement) => {
+                inputElement.focus();
+              }}
+              require={props.require}
+              inputType={props.inputType}
+              id={props.id}
+              class={props?.class}
+              defaultValue={props?.defaultValue || ''}
+              maxlength={50}
+              name={props?.name}
+              label={props.label}
+              onlyLetters={props.onlyLetters}
+              onlyNumbers={props.onlyNumbers}
+              setValue={props.setValue}
+              setCapitalise={false}
+            />
+          )}
 
-        {props?.type === "cnic" && (
-          <CnicInput
-            type={props.type}
-            forceActive={props?.forceActive || false}
-            readOnly={false}
-            icon={props.icon}
-            autoFocus={(inputElement: HTMLInputElement) => {
-              inputElement.focus();
-            }}
-            require={props.require}
-            inputType={props.inputType}
-            id={props.id}
-            class={props?.class}
-            defaultValue={props?.defaultValue || ''}
-            maxlength={50}
-            name={props?.name}
-            label={props.label}
-            onlyLetters={props.onlyLetters}
-            onlyNumbers={props.onlyNumbers}
-            setValue={props.setValue}
-            setCapitalise={false}
-          />
-        )}
+          {props?.type === "password" && (
+            <PasswordInput
+              type={props.type}
+              forceActive={props?.forceActive || false}
+              readOnly={false}
+              icon={props.icon}
+              autoFocus={(inputElement: HTMLInputElement) => {
+                inputElement.focus();
+              }}
+              require={props.require}
+              inputType={props.inputType}
+              id={props.id}
+              class={props?.class}
+              defaultValue={props?.defaultValue || ''}
+              maxlength={50}
+              name={props?.name}
+              label={props.label}
+              onlyLetters={props.onlyLetters}
+              onlyNumbers={props.onlyNumbers}
+              setValue={props.setValue}
+              setCapitalise={false}
+            />
+          )}
 
-
-
-
-      </>
-    </header>
+          {props?.type === "cnic" && (
+            <CnicInput
+              type={props.type}
+              forceActive={props?.forceActive || false}
+              readOnly={false}
+              icon={props.icon}
+              autoFocus={(inputElement: HTMLInputElement) => {
+                inputElement.focus();
+              }}
+              require={props.require}
+              inputType={props.inputType}
+              id={props.id}
+              class={props?.class}
+              defaultValue={props?.defaultValue || ''}
+              maxlength={50}
+              name={props?.name}
+              label={props.label}
+              onlyLetters={props.onlyLetters}
+              onlyNumbers={props.onlyNumbers}
+              setValue={props.setValue}
+              setCapitalise={false}
+            />
+          )}
+         
+     </>
+  
   );
 };
 
